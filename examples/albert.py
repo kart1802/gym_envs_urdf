@@ -3,6 +3,8 @@ import gymnasium as gym
 import numpy as np
 from urdfenvs.robots.generic_urdf.generic_diff_drive_robot import GenericDiffDriveRobot
 from urdfenvs.urdf_common.urdf_env import UrdfEnv
+import pybullet as p
+import pybullet_data
 
 
 def run_albert(n_steps=1000, render=False, goal=True, obstacles=True):
@@ -21,6 +23,10 @@ def run_albert(n_steps=1000, render=False, goal=True, obstacles=True):
     env: UrdfEnv = UrdfEnv(
         dt=0.01, robots=robots, render=render
     )
+    
+    p.setAdditionalSearchPath(pybullet_data.getDataPath())
+    table = p.loadURDF("table/table.urdf", basePosition=[2.5, 0, 0])
+    
     action = np.zeros(env.n())
     action[0] = 0.2
     action[1] = 0.0
