@@ -5,6 +5,7 @@ from urdfenvs.robots.generic_urdf.generic_diff_drive_robot import GenericDiffDri
 from urdfenvs.urdf_common.urdf_env import UrdfEnv
 import pybullet as p
 import pybullet_data
+import os
 
 
 def run_albert(n_steps=1000, render=False, goal=True, obstacles=True):
@@ -24,8 +25,23 @@ def run_albert(n_steps=1000, render=False, goal=True, obstacles=True):
         dt=0.01, robots=robots, render=render
     )
     
-    p.setAdditionalSearchPath(pybullet_data.getDataPath())
+    client_id = env._cid
+
+    p.setAdditionalSearchPath(pybullet_data.getDataPath(), physicsClientId=client_id)
+    
     table = p.loadURDF("table/table.urdf", basePosition=[2.5, 0, 0])
+    tray = p.loadURDF("tray/traybox.urdf", basePosition=[2.8, 0, 0.64])
+    lego = p.loadURDF("lego/lego.urdf", basePosition=[2.8, -0.1, 0.68], globalScaling=2.0)
+    cube_small = p.loadURDF("cube_small.urdf", basePosition=[2.9, -0.075, 0.7], globalScaling=2.0)
+    p.changeDynamics(cube_small, -1, mass=3, physicsClientId=client_id)
+    racecar = p.loadURDF("racecar/racecar.urdf", basePosition=[2.0, 0, 0.64])
+
+    base_dir = os.path.dirname(os.path.abspath(__file__)) # Python file directory
+    repo_root = os.path.dirname(base_dir) # Move up to the repository root
+    custom_asset_path = os.path.join(repo_root, "urdfenvs", "assets") # assets directory present in urdfenvs
+
+    p.setAdditionalSearchPath(custom_asset_path, physicsClientId=client_id)
+    banana = p.loadURDF("banana/banana.urdf", basePosition=[2.8, 0.125, 0.67])
     
     action = np.zeros(env.n())
     action[0] = 0.2
