@@ -14,7 +14,7 @@ class GenericDiffDriveRobot(DifferentialDriveRobot):
             castor_wheels: List[str],
             wheel_radius: float,
             wheel_distance: float,
-            spawn_offset: np.ndarray = np.array([0.0, 0.0, 0.15]),
+            spawn_offset: np.ndarray = np.array([0.0, 0.0, 0.05]),
             spawn_rotation: float = 0.0,
             facing_direction: str = 'x',
             not_actuated_joints: List[str] = [],

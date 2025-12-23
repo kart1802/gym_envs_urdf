@@ -91,4 +91,5 @@ def add_shape(
         basePosition=base_position,
         baseOrientation=base_orientation,
     )
+    print("Added shape of type ", shape_type, " with id ", bullet_id)
     return bullet_id

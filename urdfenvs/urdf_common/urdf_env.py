@@ -23,7 +23,7 @@ from urdfenvs.urdf_common.helpers import (
 from urdfenvs.urdf_common.plane import Plane
 from urdfenvs.urdf_common.pybullet_helpers import add_shape
 from urdfenvs.urdf_common.reward import Reward
-
+import logging
 
 class UrdfEnv(gym.Env):
     """Generic urdf-environment for OpenAI-Gym"""
@@ -251,7 +251,7 @@ class UrdfEnv(gym.Env):
         step_final_end = time.perf_counter()
         total_step_time = step_final_end - step_start
         real_time_factor = self.dt / total_step_time
-        logging.info(f"Real time factor {real_time_factor}")
+        # logging.info(f"Real time factor {real_time_factor}")
         return ob, reward, terminated, truncated, self._info
 
     def _get_truncated(self) -> bool:
@@ -366,7 +366,7 @@ class UrdfEnv(gym.Env):
             except Exception:
                 continue
 
-    def add_obstacle(self, obst: CollisionObstacle) -> None:
+    def add_obstacle(self, obst: CollisionObstacle):
         """Adds obstacle to the simulation environment.
 
         Parameters
@@ -374,9 +374,11 @@ class UrdfEnv(gym.Env):
 
         obst: Obstacle from mpscenes
         """
-        # add obstacle to environment
+        print(f"!!! DEBUG: CALLING ADD_OBSTACLE for {obst.name()}") 
+        logging.info(f"Adding obstacle: {obst.name()}")
+       
         if obst.type() == "urdf":
-            obst_id = add_shape(obst.type(), obst.size(), urdf=obst.urdf())
+            obst_id = add_shape(obst.type(), obst.size(), urdf=obst.urdf(), position=obst.position(), orientation=obst.orientation())
         else:
             obst_id = add_shape(
                 obst.type(),
@@ -386,6 +388,7 @@ class UrdfEnv(gym.Env):
                 orientation=obst.orientation().tolist(),
                 movable=obst.movable(),
             )
+        print(f"!!! DEBUG: OBSTACLE ID {obst_id}") 
         self._obsts[obst_id] = obst
         if self._t != 0.0:
             warnings.warn(

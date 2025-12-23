@@ -36,7 +36,7 @@ class DifferentialDriveRobot(GenericRobot):
         castor_wheels: List[str],
         wheel_radius: float,
         wheel_distance: float,
-        spawn_offset: np.ndarray = np.array([0.0, 0.0, 0.15]),
+        spawn_offset: np.ndarray = np.array([0.0, 0.0, 0.05]),
         spawn_rotation: float = 0.0,
         facing_direction: str = "x",
         not_actuated_joints: List[str] = [],
@@ -109,6 +109,9 @@ ignored for differential drive robots."
         )
         spawn_position = self._spawn_offset
         spawn_position[0:2] += pos[0:2]
+        print("HEY THERE SPAMMING ")
+        print("Spawn position:", spawn_position)
+        print("Base orientation:", base_orientation)
         self._robot = p.loadURDF(
             fileName=self._urdf_file,
             basePosition=spawn_position,
@@ -129,6 +132,7 @@ ignored for differential drive robots."
             )
         for i in self._castor_joints:
             p.changeDynamics(self._robot, i, lateralFriction=0)
+        print(self._n)
         for i in range(2, self._n):
             p.resetJointState(
                 self._robot,
