@@ -1,0 +1,426 @@
+<robot name='supermarket'>
+
+<link name="supermarket_base"/>
+
+
+<link name="shelf_0_0">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_0_0_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_0_2">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_0_2_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_0_3">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_0_3_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_1_1">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_1_1_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_1_2">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_1_2_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_1_3">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_1_3_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_2_0">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_2_0_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_2_1">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_2_1_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="table_2_3">
+    <contact>
+      <lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.6"/>
+      <geometry>
+				<mesh filename="table.obj" scale="1.5 1 0.05"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.6"/>
+      <geometry>
+	 	<box size="1.5 1 0.05"/>
+      </geometry>
+    </collision>
+	<visual>
+      <origin rpy="0 0 0" xyz="-0.65 -0.4 0.29"/>
+      <geometry>
+	    <mesh filename="table.obj" scale="0.1 0.1 0.58"/>
+      </geometry>
+	  <material name="framemat0"/>	 
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.65 0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.58"/>
+      </geometry>
+	  <material name="framemat0"/>
+	  </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.65 -0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.58"/>
+      </geometry>
+	  <material name="framemat0"/>
+	  </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.65 0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.58"/>
+      </geometry>
+    </visual>
+  </link>
+                          
+
+<link name="shelf_3_0">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_3_0_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_3_1">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_3_1_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="shelf_3_2">
+  <visual>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+    <material name="shelf_3_2_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="2.0 0.5 1.8"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="wall_front">
+  <visual>
+    <geometry>
+      <box size="11.2 0.3 2.5"/>
+    </geometry>
+    <material name="wall_front_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="11.2 0.3 2.5"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="wall_back">
+  <visual>
+    <geometry>
+      <box size="11.2 0.3 2.5"/>
+    </geometry>
+    <material name="wall_back_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="11.2 0.3 2.5"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="wall_right">
+  <visual>
+    <geometry>
+      <box size="0.3 19.5 2.5"/>
+    </geometry>
+    <material name="wall_right_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.3 19.5 2.5"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="wall_left">
+  <visual>
+    <geometry>
+      <box size="0.3 19.5 2.5"/>
+    </geometry>
+    <material name="wall_left_mat">
+      <color rgba="0.6 0.4 0.3 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.3 19.5 2.5"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint_shelf_0_0" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_0_0"/>
+  <origin xyz="-4.6 -8.75 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_0_2" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_0_2"/>
+  <origin xyz="0.0 -8.75 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_0_3" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_0_3"/>
+  <origin xyz="2.3 -8.75 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_1_1" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_1_1"/>
+  <origin xyz="-2.3 -4.083333333333333 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_1_2" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_1_2"/>
+  <origin xyz="0.0 -4.083333333333333 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_1_3" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_1_3"/>
+  <origin xyz="2.3 -4.083333333333333 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_2_0" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_2_0"/>
+  <origin xyz="-4.6 0.5833333333333339 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_2_1" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_2_1"/>
+  <origin xyz="-2.3 0.5833333333333339 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_table_2_3" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="table_2_3"/>
+  <origin xyz="2.3 0.5833333333333339 0.0"
+          rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_3_0" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_3_0"/>
+  <origin xyz="-4.6 5.25 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_3_1" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_3_1"/>
+  <origin xyz="-2.3 5.25 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_shelf_3_2" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="shelf_3_2"/>
+  <origin xyz="0.0 5.25 0.9" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_wall_front" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="wall_front"/>
+  <origin xyz="0 9.75 1.25" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_wall_back" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="wall_back"/>
+  <origin xyz="0 -9.75 1.25" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_wall_right" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="wall_right"/>
+  <origin xyz="5.6 0 1.25" rpy="0 0 0"/>
+</joint>
+
+
+<joint name="joint_wall_left" type="fixed">
+  <parent link="supermarket_base"/>
+  <child link="wall_left"/>
+  <origin xyz="-5.6 0 1.25" rpy="0 0 0"/>
+</joint>
+
+</robot>
