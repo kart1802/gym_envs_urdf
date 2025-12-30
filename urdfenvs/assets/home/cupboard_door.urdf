@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="cupboard_door">
+<link name="cupboard_door_base_link">
+  <inertial>
+    <mass value="0.0"/>
+    <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+  </inertial>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    <geometry>
+      <mesh filename="package://meshes/cupboard_door.dae" scale="1 0.85 0.85"/>
+    </geometry>
+    <material name="material_name">
+      <color rgba="0.4 0.2 0.0 1.0"/>
+    </material>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    <geometry>
+      <mesh filename="package://meshes/cupboard_door.dae" scale="1 0.85 0.85"/>
+
+      </geometry>
+  </collision>
+</link>
+</robot>

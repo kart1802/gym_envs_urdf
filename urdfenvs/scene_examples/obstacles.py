@@ -86,81 +86,211 @@ movable_obstacle_dict = {
 movable_obstacle = BoxObstacle(name="movable_box", content_dict=movable_obstacle_dict)
 
 
-wall_length = 10
+wall_length = 12
+wall_color = [0.8, 0.8, 0.8, 1.0]
 wall_obstacles_dicts = [
     {
         'type': 'box', 
          'geometry': {
-             'position': [wall_length/2.0, 0.0, 0.4], 'width': wall_length, 'height': 0.8, 'length': 0.1
+             'position': [wall_length/2.0, 0.0, 0.9], 'width': wall_length, 'height': 2.8, 'length': 0.2
         },
         'high': {
-            'position' : [wall_length/2.0, 0.0, 0.4],
+            'position' : [wall_length/2.0, 0.0, 0.9],
             'width': wall_length,
-            'height': 0.8,
-            'length': 0.1,
+            'height': 2.8,
+            'length': 0.2,
         },
         'low': {
-            'position' : [wall_length/2.0, 0.0, 0.4],
+            'position' : [wall_length/2.0, 0.0, 0.9],
             'width': wall_length,
-            'height': 0.8,
-            'length': 0.1,
+            'height': 2.8,
+            'length': 0.2,
         },
+        "rgba": wall_color,
     },
     {
         'type': 'box', 
          'geometry': {
-             'position': [0.0, wall_length/2.0, 0.4], 'width': 0.1, 'height': 0.8, 'length': wall_length
+             'position': [0.0, wall_length/2.0, 0.9], 'width': 0.2, 'height': 2.8, 'length': wall_length
         },
         'high': {
-            'position' : [0.0, wall_length/2.0, 0.4],
-            'width': 0.1,
-            'height': 0.8,
+            'position' : [0.0, wall_length/2.0, 0.9],
+            'width': 0.2,
+            'height': 2.8,
             'length': wall_length,
         },
         'low': {
-            'position' : [0.0, wall_length/2.0, 0.4],
-            'width': 0.1,
-            'height': 0.8,
+            'position' : [0.0, wall_length/2.0, 0.9],
+            'width': 0.2,
+            'height': 2.8,
             'length': wall_length,
         },
+        "rgba": wall_color,
     },
     {
         'type': 'box', 
          'geometry': {
-             'position': [0.0, -wall_length/2.0, 0.4], 'width': 0.1, 'height': 0.8, 'length': wall_length
+             'position': [0.0, -wall_length/2.0, 0.9], 'width': 0.2, 'height': 2.8, 'length': wall_length
         },
         'high': {
-            'position' : [0.0, -wall_length/2.0, 0.4],
-            'width': 0.1,
-            'height': 0.8,
+            'position' : [0.0, -wall_length/2.0, 0.9],
+            'width': 0.2,
+            'height': 2.8,
             'length': wall_length,
         },
         'low': {
-            'position' : [0.0, -wall_length/2.0, 0.4],
-            'width': 0.1,
-            'height': 0.8,
+            'position' : [0.0, -wall_length/2.0, 0.9],
+            'width': 0.2,
+            'height': 2.8,
             'length': wall_length,
         },
+        "rgba": wall_color,
     },
     {
         'type': 'box', 
          'geometry': {
-             'position': [-wall_length/2.0, 0.0, 0.4], 'width': wall_length, 'height': 0.8, 'length': 0.1
+             'position': [-wall_length/2.0, 0.0, 0.9], 'width': wall_length, 'height': 2.8, 'length': 0.2
         },
         'high': {
-            'position' : [-wall_length/2.0, 0.0, 0.4],
+            'position' : [-wall_length/2.0, 0.0, 0.9],
             'width': wall_length,
-            'height': 0.8,
-            'length': 0.1,
+            'height': 2.8,
+            'length': 0.2,
         },
         'low': {
-            'position' : [-wall_length/2.0, 0.0, 0.4],
+            'position' : [-wall_length/2.0, 0.0, 0.9],
             'width': wall_length,
-            'height': 0.8,
-            'length': 0.1,
+            'height': 2.8,
+            'length': 0.2,
         },
+        "rgba": wall_color,
+    },
+    {
+        'type': 'box', 
+         'geometry': {
+             'position': [wall_length/8, -wall_length/2.0 + wall_length/15, 0.9], 'width': wall_length/7.5, 'height': 2.8, 'length': 0.2
+        },
+        'high': {
+            'position' : [wall_length/8, -wall_length/2.0 + wall_length/15, 0.9],
+            'width': wall_length/7.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        'low': {
+            'position' : [wall_length/8, -wall_length/2.0 + wall_length/15, 0.9],
+            'width': wall_length/7.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        "rgba": wall_color,
+    },
+    {
+        'type': 'box', 
+         'geometry': {
+             'position': [wall_length/8, -wall_length/2.0 + wall_length/15 + wall_length/5, 0.9], 'width': wall_length/7.5, 'height': 2.8, 'length': 0.2
+        },
+        'high': {
+            'position' : [wall_length/8, -wall_length/2.0 + wall_length/15 + wall_length/5, 0.9],
+            'width': wall_length/7.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        'low': {
+            'position' : [wall_length/8, -wall_length/2.0 + wall_length/15 + wall_length/5, 0.9],
+            'width': wall_length/7.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        "rgba": wall_color,
+    },
+    {
+        'type': 'box', 
+         'geometry': {
+             'position': [-wall_length/8, wall_length/2.0 - wall_length/7, 0.9], 'width': wall_length/3.5, 'height': 2.8, 'length': 0.2
+        },
+        'high': {
+            'position' : [-wall_length/8, wall_length/2.0 - wall_length/7, 0.9],
+            'width': wall_length/3.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        'low': {
+            'position' : [-wall_length/8, wall_length/2.0 - wall_length/7, 0.9],
+            'width': wall_length/3.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        "rgba": wall_color,
+    },
+    {
+        'type': 'box', 
+         'geometry': {
+             'position': [-wall_length/8, -wall_length/6 + wall_length/7, 0.9], 'width': wall_length/3.5, 'height': 2.8, 'length': 0.2
+        },
+        'high': {
+            'position' : [-wall_length/8, -wall_length/6 + wall_length/7, 0.9],
+            'width': wall_length/3.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        'low': {
+            'position' : [-wall_length/8, -wall_length/6 + wall_length/7, 0.9],
+            'width': wall_length/3.5,
+            'height': 2.8,
+            'length': 0.2,
+        },
+        "rgba": wall_color,
+    },
+    {
+        'type': 'box', 
+         'geometry': {
+             'position': [wall_length/4+wall_length/44, -wall_length/6, 0.9], 
+             'width': 0.2, 
+             'height': 2.8, 
+             'length': wall_length/2.2
+        },
+        'high': {
+            'position' : [wall_length/4+wall_length/44, -wall_length/6, 0.9],
+            'width': 0.2,
+            'height': 2.8,
+            'length': wall_length/2.2,
+        },
+        'low': {
+            'position' : [wall_length/4+wall_length/44, -wall_length/6, 0.9],
+            'width': 0.2,
+            'height': 2.8,
+            'length': wall_length/2.2,
+        },
+        "rgba": wall_color,
+    },
+    {
+        'type': 'box', 
+         'geometry': {
+             'position': [-wall_length/4-wall_length/36, -wall_length/6, 0.9], 
+             'width': 0.2, 
+             'height': 2.8, 
+             'length': wall_length/2.25
+        },
+        'high': {
+            'position' : [-wall_length/4-wall_length/36, -wall_length/6, 0.9],
+            'width': 0.2,
+            'height': 2.8,
+            'length': wall_length/2.25,
+        },
+        'low': {
+            'position' : [-wall_length/4-wall_length/36, -wall_length/6, 0.9],
+            'width': 0.2,
+            'height': 2.8,
+            'length': wall_length/2.25,
+        },
+        "rgba": wall_color,
     },
 ]
+
+wall_obstacles = [BoxObstacle(name=f"wall_{i}", content_dict=obst_dict) for i, obst_dict in enumerate(wall_obstacles_dicts)]
+
+
+
 
 wall_obstacles = [BoxObstacle(name=f"wall_{i}", content_dict=obst_dict) for i, obst_dict in enumerate(wall_obstacles_dicts)]
 

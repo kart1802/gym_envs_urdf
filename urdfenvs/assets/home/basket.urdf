@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<robot name="banana">
-<link name="banana_base_link">
+<robot name="basket">
+<link name="basket_base_link">
   <inertial>
     <mass value="1.0"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -8,9 +8,9 @@
   </inertial>
 
   <visual>
-    <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    <origin xyz="0.125 -0.075 1.025" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://meshes/banana.obj" scale="1 1 1"/>
+      <mesh filename="package://meshes/basket.dae" scale="1 1 1"/>
     </geometry>
     <material name="material_name">
       <color rgba="1.0 1.0 0.0 1.0"/>
@@ -18,9 +18,9 @@
   </visual>
 
   <collision>
-    <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    <origin xyz="0.125 -0.075 1.025" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://meshes/banana.obj" scale="1 1 1"/> 
+      <mesh filename="package://meshes/basket.dae" scale="1 1 1"/> 
       
       </geometry>
   </collision>

@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<robot name="random_environment">
+<link name="world"/>
+
+  <link name="obj_0">
+    <visual>
+      <origin xyz="5.0 0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="0.1 10.0 0.5"/>
+      </geometry>
+      <material name="obj_0_mat">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="5.0 0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="0.1 10.0 0.5"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_0" type="fixed">
+    <parent link="world"/>
+    <child link="obj_0"/>
+  </joint>
+
+
+  <link name="obj_1">
+    <visual>
+      <origin xyz="-5.0 0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="0.1 10.0 0.5"/>
+      </geometry>
+      <material name="obj_1_mat">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-5.0 0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="0.1 10.0 0.5"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_1" type="fixed">
+    <parent link="world"/>
+    <child link="obj_1"/>
+  </joint>
+
+
+  <link name="obj_2">
+    <visual>
+      <origin xyz="0 5.0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="10.0 0.1 0.5"/>
+      </geometry>
+      <material name="obj_2_mat">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 5.0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="10.0 0.1 0.5"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_2" type="fixed">
+    <parent link="world"/>
+    <child link="obj_2"/>
+  </joint>
+
+
+  <link name="obj_3">
+    <visual>
+      <origin xyz="0 -5.0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="10.0 0.1 0.5"/>
+      </geometry>
+      <material name="obj_3_mat">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 -5.0 0.25" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="10.0 0.1 0.5"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_3" type="fixed">
+    <parent link="world"/>
+    <child link="obj_3"/>
+  </joint>
+
+
+  <link name="obj_4">
+    <visual>
+      <origin xyz="-0.5820984664355082 -0.7166897812125987 0.3198649911514837" rpy="0 0 2.0755548937813404"/>
+      <geometry>
+        <box size="0.548795921713603 0.22074098546231308 0.6397299823029674"/>
+      </geometry>
+      <material name="obj_4_mat">
+        <color rgba="0.2046486340378425 0.6192709663506637 0.29965467367452314 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.5820984664355082 -0.7166897812125987 0.3198649911514837" rpy="0 0 2.0755548937813404"/>
+      <geometry>
+        <box size="0.548795921713603 0.22074098546231308 0.6397299823029674"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_4" type="fixed">
+    <parent link="world"/>
+    <child link="obj_4"/>
+  </joint>
+
+
+  <link name="obj_5">
+    <visual>
+      <origin xyz="-3.288780491895598 0.12220309139171803 0.31165683771081565" rpy="0 0 1.158869853890875"/>
+      <geometry>
+        <box size="0.4134618200822933 0.696907066215436 0.6233136754216313"/>
+      </geometry>
+      <material name="obj_5_mat">
+        <color rgba="0.7853351478166735 0.8539752926394888 0.4942368373819278 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-3.288780491895598 0.12220309139171803 0.31165683771081565" rpy="0 0 1.158869853890875"/>
+      <geometry>
+        <box size="0.4134618200822933 0.696907066215436 0.6233136754216313"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_5" type="fixed">
+    <parent link="world"/>
+    <child link="obj_5"/>
+  </joint>
+
+
+  <link name="obj_6">
+    <visual>
+      <origin xyz="-3.912421460518097 -0.6468990516234951 0.3020984360486816" rpy="0 0 0.6065216309673527"/>
+      <geometry>
+        <box size="0.8772491882859745 0.2637163816072488 0.6041968720973632"/>
+      </geometry>
+      <material name="obj_6_mat">
+        <color rgba="0.12715997170127746 0.5967453089785958 0.22601200060423587 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-3.912421460518097 -0.6468990516234951 0.3020984360486816" rpy="0 0 0.6065216309673527"/>
+      <geometry>
+        <box size="0.8772491882859745 0.2637163816072488 0.6041968720973632"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_6" type="fixed">
+    <parent link="world"/>
+    <child link="obj_6"/>
+  </joint>
+
+
+  <link name="obj_7">
+    <visual>
+      <origin xyz="-0.28991263875929807 -2.684310963615312 0.2399305140013197" rpy="0 0 4.0237941264893475"/>
+      <geometry>
+        <box size="0.2855565474479864 0.37624496565644777 0.4798610280026394"/>
+      </geometry>
+      <material name="obj_7_mat">
+        <color rgba="0.48306983555175165 0.5052367200185491 0.3868926511185593 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.28991263875929807 -2.684310963615312 0.2399305140013197" rpy="0 0 4.0237941264893475"/>
+      <geometry>
+        <box size="0.2855565474479864 0.37624496565644777 0.4798610280026394"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_7" type="fixed">
+    <parent link="world"/>
+    <child link="obj_7"/>
+  </joint>
+
+
+  <link name="obj_8">
+    <visual>
+      <origin xyz="1.8067711194644058 4.180959720803296 0.16491943940092557" rpy="0 0 3.14164518837165"/>
+      <geometry>
+        <box size="0.8349099635532617 0.6640033431022454 0.32983887880185114"/>
+      </geometry>
+      <material name="obj_8_mat">
+        <color rgba="0.8895200639461449 0.34161365267110966 0.5671441276277093 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="1.8067711194644058 4.180959720803296 0.16491943940092557" rpy="0 0 3.14164518837165"/>
+      <geometry>
+        <box size="0.8349099635532617 0.6640033431022454 0.32983887880185114"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_8" type="fixed">
+    <parent link="world"/>
+    <child link="obj_8"/>
+  </joint>
+
+
+  <link name="obj_9">
+    <visual>
+      <origin xyz="0.320437561478907 4.083680042503801 0.41062367399884014" rpy="0 0 3.4193607158897907"/>
+      <geometry>
+        <box size="0.542036770636888 0.5493978104214392 0.8212473479976803"/>
+      </geometry>
+      <material name="obj_9_mat">
+        <color rgba="0.0820949222750248 0.3663424016750204 0.8508505040045017 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.320437561478907 4.083680042503801 0.41062367399884014" rpy="0 0 3.4193607158897907"/>
+      <geometry>
+        <box size="0.542036770636888 0.5493978104214392 0.8212473479976803"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_9" type="fixed">
+    <parent link="world"/>
+    <child link="obj_9"/>
+  </joint>
+
+
+  <link name="obj_10">
+    <visual>
+      <origin xyz="-3.895700663367408 4.444668102791455 0.19887089559894133" rpy="0 0 6.098335964449215"/>
+      <geometry>
+        <box size="0.5250200344383606 0.22176189271587968 0.39774179119788267"/>
+      </geometry>
+      <material name="obj_10_mat">
+        <color rgba="0.8002583511325868 0.6018171214054674 0.7649598604516815 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-3.895700663367408 4.444668102791455 0.19887089559894133" rpy="0 0 6.098335964449215"/>
+      <geometry>
+        <box size="0.5250200344383606 0.22176189271587968 0.39774179119788267"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_10" type="fixed">
+    <parent link="world"/>
+    <child link="obj_10"/>
+  </joint>
+
+
+  <link name="obj_11">
+    <visual>
+      <origin xyz="-1.2903814698951699 -4.0888893127914 0.30962675012014573" rpy="0 0 6.177335282571427"/>
+      <geometry>
+        <box size="0.3353803572673424 0.43441858545555184 0.6192535002402915"/>
+      </geometry>
+      <material name="obj_11_mat">
+        <color rgba="0.4413549193548467 0.5040004393791526 0.32354131753469884 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-1.2903814698951699 -4.0888893127914 0.30962675012014573" rpy="0 0 6.177335282571427"/>
+      <geometry>
+        <box size="0.3353803572673424 0.43441858545555184 0.6192535002402915"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_11" type="fixed">
+    <parent link="world"/>
+    <child link="obj_11"/>
+  </joint>
+
+
+  <link name="obj_12">
+    <visual>
+      <origin xyz="2.130723506584016 -1.087104897525263 0.43280675985380035" rpy="0 0 0.0817903386578102"/>
+      <geometry>
+        <box size="0.40779580219770967 0.50951190825661 0.8656135197076007"/>
+      </geometry>
+      <material name="obj_12_mat">
+        <color rgba="0.7974049390325936 0.2693887975963012 0.5826848885290346 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="2.130723506584016 -1.087104897525263 0.43280675985380035" rpy="0 0 0.0817903386578102"/>
+      <geometry>
+        <box size="0.40779580219770967 0.50951190825661 0.8656135197076007"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_12" type="fixed">
+    <parent link="world"/>
+    <child link="obj_12"/>
+  </joint>
+
+
+  <link name="obj_13">
+    <visual>
+      <origin xyz="-0.026335811389386343 -0.7658474636278152 0.2550093703493126" rpy="0 0 2.2045931749606336"/>
+      <geometry>
+        <box size="0.22044075347975423 0.7297616154146607 0.5100187406986252"/>
+      </geometry>
+      <material name="obj_13_mat">
+        <color rgba="0.5509779053244193 0.9729106898748249 0.11277621523807146 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.026335811389386343 -0.7658474636278152 0.2550093703493126" rpy="0 0 2.2045931749606336"/>
+      <geometry>
+        <box size="0.22044075347975423 0.7297616154146607 0.5100187406986252"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_13" type="fixed">
+    <parent link="world"/>
+    <child link="obj_13"/>
+  </joint>
+
+
+  <link name="obj_14">
+    <visual>
+      <origin xyz="1.4176114889313958 -2.568278282400417 0.39535990344836014" rpy="0 0 2.6185390921518885"/>
+      <geometry>
+        <box size="0.4506068227437709 0.23343816785224805 0.7907198068967203"/>
+      </geometry>
+      <material name="obj_14_mat">
+        <color rgba="0.643841934148195 0.6614813267154414 0.1704771334837707 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="1.4176114889313958 -2.568278282400417 0.39535990344836014" rpy="0 0 2.6185390921518885"/>
+      <geometry>
+        <box size="0.4506068227437709 0.23343816785224805 0.7907198068967203"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_14" type="fixed">
+    <parent link="world"/>
+    <child link="obj_14"/>
+  </joint>
+
+
+  <link name="obj_15">
+    <visual>
+      <origin xyz="3.3202496378887094 2.2390009044916903 0.1535816832686764" rpy="0 0 5.017661648359744"/>
+      <geometry>
+        <box size="0.9053217885988389 0.8224065278467747 0.3071633665373528"/>
+      </geometry>
+      <material name="obj_15_mat">
+        <color rgba="0.5433452305839027 0.2208379150614619 0.9184586465896005 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="3.3202496378887094 2.2390009044916903 0.1535816832686764" rpy="0 0 5.017661648359744"/>
+      <geometry>
+        <box size="0.9053217885988389 0.8224065278467747 0.3071633665373528"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_15" type="fixed">
+    <parent link="world"/>
+    <child link="obj_15"/>
+  </joint>
+
+
+  <link name="obj_16">
+    <visual>
+      <origin xyz="3.7252392944861885 -0.7223808482386138 0.20551141171200793" rpy="0 0 3.3941233943027878"/>
+      <geometry>
+        <box size="0.673667662133101 0.4769903275641172 0.41102282342401586"/>
+      </geometry>
+      <material name="obj_16_mat">
+        <color rgba="0.6084421578050496 0.826249828434158 0.6235631845621308 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="3.7252392944861885 -0.7223808482386138 0.20551141171200793" rpy="0 0 3.3941233943027878"/>
+      <geometry>
+        <box size="0.673667662133101 0.4769903275641172 0.41102282342401586"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_16" type="fixed">
+    <parent link="world"/>
+    <child link="obj_16"/>
+  </joint>
+
+
+  <link name="obj_17">
+    <visual>
+      <origin xyz="0.43117002081338995 1.7956855781149335 0.29570646679794366" rpy="0 0 1.544477093383147"/>
+      <geometry>
+        <box size="0.34136972926754083 0.6730058821228366 0.5914129335958873"/>
+      </geometry>
+      <material name="obj_17_mat">
+        <color rgba="0.1866271455864802 0.11058314779616107 0.2740592525360537 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.43117002081338995 1.7956855781149335 0.29570646679794366" rpy="0 0 1.544477093383147"/>
+      <geometry>
+        <box size="0.34136972926754083 0.6730058821228366 0.5914129335958873"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_17" type="fixed">
+    <parent link="world"/>
+    <child link="obj_17"/>
+  </joint>
+
+
+  <link name="obj_18">
+    <visual>
+      <origin xyz="-2.8144210976829203 -3.6424075296527665 0.218068922087897" rpy="0 0 1.7828903202925674"/>
+      <geometry>
+        <box size="0.20820003151967273 0.7034877782636657 0.436137844175794"/>
+      </geometry>
+      <material name="obj_18_mat">
+        <color rgba="0.21492438413069526 0.2856037339109023 0.471409857469679 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-2.8144210976829203 -3.6424075296527665 0.218068922087897" rpy="0 0 1.7828903202925674"/>
+      <geometry>
+        <box size="0.20820003151967273 0.7034877782636657 0.436137844175794"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="world_to_obj_18" type="fixed">
+    <parent link="world"/>
+    <child link="obj_18"/>
+  </joint>
+
+</robot>
