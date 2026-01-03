@@ -140,7 +140,7 @@
 </link>
 
 
-<link name="table_2_3">
+<!-- <link name="table_2_3">
     <contact>
       <lateral_friction value="1.0"/>
     </contact>
@@ -191,7 +191,7 @@
         <mesh filename="table.obj" scale="0.1 0.1 0.75"/>
       </geometry>
     </visual>
-  </link>
+  </link> -->
                           
 
 <link name="shelf_3_0">
@@ -367,13 +367,13 @@
   <origin xyz="-2.3 0.5833333333333339 0.9" rpy="0 0 0"/>
 </joint>
 
-
+<!-- 
 <joint name="joint_table_2_3" type="fixed">
   <parent link="supermarket_base"/>
   <child link="table_2_3"/>
   <origin xyz="2.3 0.5833333333333339 0.0"
           rpy="0 0 0"/>
-</joint>
+</joint> -->
 
 
 <joint name="joint_shelf_3_0" type="fixed">
